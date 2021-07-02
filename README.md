@@ -7,4 +7,4 @@
 
 ### Screenshot
 
-<img src="demo/demo.png" width="800" height="300">
+<img src="demo/demo.png" width="800" height="400">
