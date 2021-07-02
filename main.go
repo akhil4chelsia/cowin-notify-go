@@ -11,7 +11,7 @@ import (
 )
 
 //Chane as per search criteria
-var DoseNo uint16 = 1
+var doseNo uint16 = 1
 var pincodes = []int32{683541, 683542, 683544, 683545, 683546, 683549, 683556, 683561, 683563, 683572, 683574, 683575, 683576, 683577, 683580, 683581, 683587, 686661, 686668, 682316, 686670, 686672, 686673, 683101, 683105, 683112}
 
 var wg sync.WaitGroup
@@ -51,7 +51,7 @@ func checkAvailability(pin int32, date string, channel chan Center) {
 		for _, c := range centers {
 			for _, s := range c.Sessions {
 				//Modify here to add more filter conditions like age, vaccine name etc.
-				if (DoseNo == 1 && s.AvailableCapacityDose1 > 0) || (DoseNo == 2 && s.AvailableCapacityDose2 > 0) {
+				if (doseNo == 1 && s.AvailableCapacityDose1 > 0) || (doseNo == 2 && s.AvailableCapacityDose2 > 0) {
 					channel <- c
 				}
 			}
